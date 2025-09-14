@@ -1,7 +1,7 @@
 <?php
 /*
  * @Description: Color scheme
- * @Version: 1.1.9
+ * @Version: 1.2.1
  * @Author: ZAXU
  * @Link: https://www.zaxu.com
  * @Package: ZAXU
@@ -22,7 +22,7 @@ add_action('wp_enqueue_scripts', function() {
         }
     // Color scheme value end
 
-    if (get_theme_mod('zaxu_dynamic_color', 'disabled') == 'disabled') {
+    if (zaxu_get_theme_mod('zaxu_dynamic_color', 'disabled') == 'disabled') {
         // General color start
             $custom_css = "
                 /* General color css code starts here */
@@ -30,7 +30,7 @@ add_action('wp_enqueue_scripts', function() {
         // General color end
     } else {
         // Dynamic color start
-                $custom_css = "
+            $custom_css = "
                 /* Dynamic color css code starts here */
             ";
         // Dynamic color end
@@ -46,7 +46,7 @@ add_action('wp_enqueue_scripts', function() {
         }
     }
 
-    if (get_theme_mod('zaxu_minify_engine', 'enabled') == 'enabled') {
+    if (zaxu_get_theme_mod('zaxu_minify_engine', 'enabled') == 'enabled') {
         $custom_css = str_replace(
             array(
                 "\rn",
