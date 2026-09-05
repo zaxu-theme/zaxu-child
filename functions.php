@@ -1,7 +1,7 @@
 <?php
 /*
  * @Description: Theme child functions and definitions
- * @Version: 1.2
+ * @Version: 1.2.2
  * @Author: ZAXU
  * @Link: https://www.zaxu.com
  * @Package: ZAXU
@@ -72,6 +72,27 @@ if ( !defined('ABSPATH') ) exit;
         );
     }, 999);
 // Login theme script end
+
+// Customizer theme style start
+	add_action('customize_controls_enqueue_scripts', function() {
+		wp_enqueue_style(
+			'zaxu-customizer-child-theme',
+			get_stylesheet_directory_uri() . '/assets/css/customizer.css'
+		);
+	}, 999);
+// Customizer theme style end
+
+// Customizer theme script start
+	add_action('customize_controls_enqueue_scripts', function() {
+		wp_enqueue_script(
+			'zaxu-customizer-child-theme',
+			get_stylesheet_directory_uri() . '/assets/js/customizer.js',
+			array('jquery'),
+			true,
+			true
+		);
+	}, 999);
+// Customizer theme script end
 
 // Load the required files start
     // Load color scheme
