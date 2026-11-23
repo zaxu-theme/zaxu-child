@@ -1,7 +1,7 @@
 <?php
 /*
- * @Description: Color scheme
- * @Version: 1.2.1
+ * @Description: Theme child color scheme
+ * @Version: 1.2.3
  * @Author: ZAXU
  * @Link: https://www.zaxu.com
  * @Package: ZAXU

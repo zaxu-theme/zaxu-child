@@ -1,5 +1,3 @@
-// Theme customization starts here
-
 function zaxuSiteInCallback() {
 	// Site in callback starts here
 }
